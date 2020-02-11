@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firechat2020": {
+      "hosting": {
+        "firechat2020": [
+          "firechat2020"
+        ]
+      }
+    }
+  }
+}
