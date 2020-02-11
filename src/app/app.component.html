@@ -1,7 +1,14 @@
 <div class="container main-container">
-  <ul>
-    <li class="text" *ngFor="let chat of chats | async">
-      {{ chat.mensaje }}
-    </li>
-  </ul>
+  <h1>Firechat 2020</h1>
+  <hr>
+
+  <div class="chat-window">
+    <app-chat></app-chat>
+  </div>
 </div>
+
+<!-- <ul>
+  <li class="text" *ngFor="let chat of chats | async">
+    {{ chat.mensaje }}
+  </li>
+</ul> -->

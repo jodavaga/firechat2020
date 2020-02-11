@@ -22,6 +22,10 @@
   height: 270px;
   /*background:gray;*/
   padding: 5px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Animaciones */
