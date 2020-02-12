@@ -26,4 +26,16 @@ export class ChatService {
       })
     );
   }
+
+  addMessage( msg: string ) {
+
+    // TODO add userId (uid)
+    const mensaje: Mensaje = {
+      name: 'Demo',
+      mensaje: msg,
+      fecha: new Date().getTime()
+    };
+
+    return this.itemsCollection.add(mensaje);
+  }
 }

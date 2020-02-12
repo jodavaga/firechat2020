@@ -10,7 +10,8 @@ export const environment = {
     databaseURL: 'https://firechat2020.firebaseio.com',
     projectId: 'firechat2020',
     storageBucket: 'firechat2020.appspot.com',
-    messagingSenderId: '867408269144'
+    messagingSenderId: '867408269144',
+    appId: '1:867408269144:web:da48c111738ee24f309f2d'
   }
 };
 
