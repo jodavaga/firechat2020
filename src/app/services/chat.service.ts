@@ -32,7 +32,18 @@ export class ChatService {
   // Authentication usign angularFirebase
 
   login( proveedor: string ) {
-    this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+
+    switch (proveedor) {
+
+      case 'google':
+        this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+      break;
+
+      case 'twitter':
+        this.afAuth.signInWithPopup(new firebase.auth.TwitterAuthProvider());
+      break;
+
+    }
   }
 
   logout() {
@@ -65,9 +76,10 @@ export class ChatService {
 
     // TODO add userId (uid)
     const mensaje: Mensaje = {
-      name: 'Demo',
+      name: this.usuario.name,
       mensaje: msg,
-      fecha: new Date().getTime()
+      fecha: new Date().getTime(),
+      uid: this.usuario.uid
     };
 
     return this.itemsCollection.add(mensaje);
