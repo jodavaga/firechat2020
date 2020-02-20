@@ -2,9 +2,18 @@
   <h1>Firechat 2020</h1>
   <hr>
 
-  <div class="chat-window">
-    <app-chat></app-chat>
+  <div class="col text-right" *ngIf="_cs.usuario.uid">
+    <button class="btn btn-danger" (click)="_cs.logout()">Logout</button>
   </div>
+
+  <div class="col" *ngIf="!_cs.usuario.uid">
+    <app-login></app-login>
+  </div>
+
+  <!-- <div class="chat-window">
+    <app-chat></app-chat>
+  </div> -->
+  
 </div>
 
 <!-- <ul>
